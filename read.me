@@ -1,0 +1,40 @@
+# Crypto Trading Bot in Python
+
+A professional-grade cryptocurrency trading bot built in Python. This bot fetches real-time data from APIs, applies technical analysis (MA crossovers and RSI), simulates trades, and supports backtesting. Ideal for crypto traders looking to automate strategies.
+
+## Features
+- **Real-time Data Fetching**: Integrates with CoinGecko API for live prices (no API key needed for public endpoints).
+- **Trading Strategy**: Simple yet effective – buys on RSI < 30 (oversold) with bullish MA crossover; sells on RSI > 70 (overbought) with bearish crossover.
+- **Simulation Mode**: Tracks a virtual portfolio without real trades.
+- **Backtesting**: Test strategies on historical data.
+- **Logging & Config**: Robust error handling, configurable parameters via YAML.
+- **Extensible**: Modular code for adding indicators, exchanges, or ML models.
+
+## Installation
+1. Clone the repo: `git clone https://github.com/BaileyOnBlockchain/crypto-trading-bot-python.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Configure `config.yaml` with your preferences (e.g., symbols like BTC-USD).
+4. Run the bot: `python main.py`
+
+## Usage
+- **Live Mode**: `python main.py --mode live`
+- **Backtest Mode**: `python main.py --mode backtest --start_date 2024-01-01 --end_date 2025-08-01`
+- Customize strategies in `strategies.py`.
+
+## Dependencies
+- requests
+- pandas
+- ta-lib (for technical indicators)
+- pyyaml
+- pytest (for tests)
+
+## Testing
+Run `pytest` to execute unit tests.
+
+## Disclaimer
+This is for educational purposes. Simulated trading only—no real funds at risk. Use at your own discretion.
+
+## Author
+Bailey Spurs – Crypto Trader & Network CEO | [GitHub](https://github.com/BaileyOnBlockchain) | [Email](mailto:baileyethanspurs4@gmail.com)
+
+Licensed under MIT.

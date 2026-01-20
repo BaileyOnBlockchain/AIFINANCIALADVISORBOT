@@ -1,0 +1,21 @@
+# Configuration for Crypto Trading Bot
+
+api:
+  base_url: "https://api.coingecko.com/api/v3"
+  symbols: ["bitcoin"]  # Add more like "ethereum"
+  vs_currency: "usd"
+
+strategy:
+  short_window: 12  # Short moving average period
+  long_window: 26   # Long moving average period
+  rsi_period: 14
+  rsi_overbought: 70
+  rsi_oversold: 30
+
+portfolio:
+  initial_balance: 10000.0  # USD
+  trade_size: 0.1  # Fraction of portfolio per trade
+
+logging:
+  level: INFO
+  file: trading_bot.log
